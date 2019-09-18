@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hiển thị các số nguyên tố đầu tiên</title>
+</head>
+<body>
+<script>
+    let num = prompt("Enter a number: ");
+    let count = 0;
+    let checkNum = 2;
+    while (count < num) {
+        if (isPrimeNumber(checkNum)) {
+            document.write(" " + checkNum);
+            count++;
+        }
+        checkNum++;
+    }
+    function isPrimeNumber(num) {
+        let squareRoot = Math.sqrt(num)
+        for (let i = 2; i <= squareRoot; i++) {
+            if (num % i === 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+</script>
+</body>
+</html>
